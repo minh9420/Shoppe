@@ -1,0 +1,32 @@
+<!-- <div id="main">
+    <div id="header">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a routerLink="/hiring" routerLinkActive="active" ariaCurrentWhenActive="page"
+                    class="nav-link active">Tuyển dụng</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/news" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link">Tin mới &
+                    ưu đãi</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/myticket" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link ">Vé
+                    của tôi</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link ">Đăng
+                    nhập đăng ký</a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+<ng-container *ngIf="(asyncTabs | async) === null">
+    Loading tabs...
+  </ng-container>
+  
+  <mat-tab-group>
+    <mat-tab *ngFor="let tab of asyncTabs | async">
+      <ng-template mat-tab-label>{{tab.label}}</ng-template>
+      {{tab.content}}
+    </mat-tab>
+  </mat-tab-group>
