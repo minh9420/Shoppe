@@ -20,7 +20,8 @@
         </ul>
     </div>
 </div> -->
-<ng-container *ngIf="(asyncTabs | async) === null">
+
+<!-- <ng-container *ngIf="(asyncTabs | async) === null">
     Loading tabs...
   </ng-container>
   
@@ -29,4 +30,29 @@
       <ng-template mat-tab-label>{{tab.label}}</ng-template>
       {{tab.content}}
     </mat-tab>
-  </mat-tab-group>
+  </mat-tab-group> -->
+  <h2>Products</h2>
+
+  <div *ngFor="let product of products">
+  
+    <h3>
+      <a style="color: blue;" [routerLink]="['/myticket', product.id]" [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+  
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+  
+    <button type="button" (click)="share()">
+      Share
+    </button>
+
+    <app-login [product]="product"
+    (notify)="onNotify($event)"
+    >
+
+    </app-login>
+  
+  </div>

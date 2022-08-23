@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Product } from './../design/product';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  @Input() product!: Product
+  @Output() notify = new EventEmitter();
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  tungrathoi() {
+    let quanque = 'concactaui';
+    this.notify.emit(quanque)
+  }
 }
+
