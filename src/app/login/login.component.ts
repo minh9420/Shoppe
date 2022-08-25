@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   constructor() { }
   
   ngOnInit(): void {
+    // console.log(this.product)
   }
   tungrathoi() {
     let quanque = 'concactaui';

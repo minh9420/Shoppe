@@ -1,1 +1,11 @@
-<p>myticket works!</p>
+<h3>
+    <a href="" [routerLink]="['/']">Home</a>
+</h3>
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Them vao gio hang</button>
+</div>

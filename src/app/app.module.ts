@@ -10,7 +10,9 @@ import { MyticketComponent } from './myticket/myticket.component';
 import { LoginComponent } from './login/login.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material/dialog'
+import {MatDialogModule} from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { TransformComponent } from './transform/transform.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import {MatDialogModule} from '@angular/material/dialog'
     HiringComponent,
     NewsComponent,
     MyticketComponent,
-    LoginComponent
+    LoginComponent,
+    TransformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

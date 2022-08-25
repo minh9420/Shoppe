@@ -1,5 +1,11 @@
 export interface Product {
-    name: string,
-    description:string,
-    price:number
+    id:number ,
+    name: string ,
+    description:string ,
+    price:number ,
 }
+export interface TransfromValue {
+    type: string ,
+    price:number ,
+}
+

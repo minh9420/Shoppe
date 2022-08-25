@@ -1,3 +1,4 @@
+import { TransformComponent } from './transform/transform.component';
 import { NewsComponent } from './news/news.component';
 import { MyticketComponent } from './myticket/myticket.component';
 import { LoginComponent } from './login/login.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'myticket/:myticketId', component: MyticketComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'transform', component: TransformComponent },
 ];
 
 @NgModule({
